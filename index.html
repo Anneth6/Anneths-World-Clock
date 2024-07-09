@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="src/style.css" />
     <title>World Clock</title>
   </head>
@@ -20,11 +21,40 @@
         </div>
         <div>
           <!-- insert dropdown with citys [melbourne, london, tampa bay, berlin, lisbon, warsaw, male, ] -->
+          <select name="city" id="city-select">
+            <option value="">Choose a city</option>
+            <option value="Europe/Berlin">Berlin</option>
+            <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
+            <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
+            <option value="Europe/Lisbon">Lisbon</option>
+            <option value="Europe/London">London</option>
+            <option value="Atlantic/Madeira">Madeira</option>
+            <option value="Indian/Maldives">Maldives</option>
+            <option value="Australia/Melbourne">Melbourne</option>
+            <option value="America/New_York">New York</option>
+            <option value="Africa/Timbuktu">Timbuktu</option>
+            <option value="Antarctica/South_Pole">South Pole</option>
+            <option value="Zulu">Zulu</option>
+          </select>
         </div>
-        <div>
-          <!-- display 3 to 5 timezones - horizontal if possible; include date and time -->
+        <!-- display 3 to 5 timezones - horizontal if possible; include date and time -->
+        <div class="city-display">
+          <h2>City Name here</h2>
+          <div class="date">Tuesday, 09 July 2024</div>
+          <div class="time">
+            <span class="24-hour">14:33</span> or
+            <span class="12-hour">02:33 pm</span>
+          </div>
+                  <div class="city-display">
+          <h2>City Name here</h2>
+          <div class="date">Tuesday, 09 July 2024</div>
+          <div class="time">
+            <span class="24-hour">14:33</span> or
+            <span class="12-hour">02:33 pm</span>
+          </div>
         </div>
       </main>
+      <br>
       <footer>
         This project was coded by
         <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
