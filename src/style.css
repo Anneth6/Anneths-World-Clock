@@ -35,10 +35,10 @@ h2 {
   margin: 0 0 5px;
 }
 .dark h1 {
-  color: #c4bbf0;
+  color: #b9d4f1;
 }
 .dark h2 {
-  color: #c4bbf0;
+  color: #b9d4f1;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -80,6 +80,7 @@ button:hover {
 
 select {
   color: rgb(161, 30, 56);
+  background-color: #fdffcd;
   display: block;
   width: 100%;
   padding: 10px;
