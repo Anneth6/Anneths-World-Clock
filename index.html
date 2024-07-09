@@ -3,71 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Peralta&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>World Clock</title>
+    <title>🕝 World Clock 🕒</title>
   </head>
-
   <body>
-    <div class="world-clock-app">
+    <div class="world-clock-container">
       <header>
         <!-- insert dark/light mode and return to home buttons -->
       </header>
 
-      <main class="world-clock-body">
+      <div class="world-clock-body">
+        <h1>World Clock</h1>
+        <p class="top-instruct">
+          To display time zone, select a city from the dropdown
+        </p>
+      </div>
+      <div>
+        <select name="city" id="city-select">
+          <option value="">Choose a city</option>
+          <option value="">Local time</option>
+          <option value="Europe/Berlin">Berlin</option>
+          <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
+          <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
+          <option value="Europe/Lisbon">Lisbon</option>
+          <option value="Europe/London">London</option>
+          <option value="Atlantic/Madeira">Madeira</option>
+          <option value="Indian/Maldives">Maldives</option>
+          <option value="Australia/Melbourne">Melbourne</option>
+          <option value="America/New_York">New York</option>
+          <option value="Africa/Timbuktu">Timbuktu</option>
+          <option value="Antarctica/South_Pole">South Pole</option>
+          <option value="Zulu">Zulu</option>
+        </select>
+      </div>
+      <!-- display 3 to 5 timezones - horizontal if possible; include date and time -->
+      <div class="city-display">
         <div>
-          <h1>World Clock</h1>
-          <p>To display time zone, select a city from the dropdown</p>
-        </div>
-        <div>
-          <!-- insert dropdown with citys [melbourne, london, tampa bay, berlin, lisbon, warsaw, male, ] -->
-          <select name="city" id="city-select">
-            <option value="">Choose a city</option>
-            <option value="Europe/Berlin">Berlin</option>
-            <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
-            <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
-            <option value="Europe/Lisbon">Lisbon</option>
-            <option value="Europe/London">London</option>
-            <option value="Atlantic/Madeira">Madeira</option>
-            <option value="Indian/Maldives">Maldives</option>
-            <option value="Australia/Melbourne">Melbourne</option>
-            <option value="America/New_York">New York</option>
-            <option value="Africa/Timbuktu">Timbuktu</option>
-            <option value="Antarctica/South_Pole">South Pole</option>
-            <option value="Zulu">Zulu</option>
-          </select>
-        </div>
-        <!-- display 3 to 5 timezones - horizontal if possible; include date and time -->
-        <div class="city-display">
           <h2>City Name here</h2>
           <div class="date">Tuesday, 09 July 2024</div>
-          <div class="time">
-            <span class="24-hour">14:33</span> or
-            <span class="12-hour">02:33 pm</span>
-          </div>
-                  <div class="city-display">
+        </div>
+        <div class="time">
+          <span class="24-hour">14:33</span> <span class="small-or">or</span>
+          <br />
+          <span class="12-hour">02:33<small>pm</small></span>
+        </div>
+      </div>
+      <div class="city-display">
+        <div>
           <h2>City Name here</h2>
           <div class="date">Tuesday, 09 July 2024</div>
-          <div class="time">
-            <span class="24-hour">14:33</span> or
-            <span class="12-hour">02:33 pm</span>
-          </div>
         </div>
-      </main>
-      <br>
-      <footer>
-        This project was coded by
-        <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
-        open-sourced on
-        <a href="https://github.com/Anneth6/Anneths-World-Clock" target="_blank"
-          >GitHub</a
-        >
-        and hosted on
-        <a href="https://app.netlify.com/teams/anneth6/overview" target="_blank"
-          >Netlify</a
-        >.
-      </footer>
-      <script src="src/script.js"></script>
+        <div class="time">
+          <span class="24-hour">14:33</span> <span class="small-or">or</span>
+          <br />
+          <span class="12-hour">02:33<small>pm</small></span>
+        </div>
+      </div>
     </div>
+
+    <footer>
+      This project was coded by
+      <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
+      open-sourced on
+      <a href="https://github.com/Anneth6/Anneths-World-Clock" target="_blank"
+        >GitHub</a
+      >
+      and hosted on
+      <a href="https://app.netlify.com/teams/anneth6/overview" target="_blank"
+        >Netlify</a
+      >.
+    </footer>
+
+    <script src="src/script.js"></script>
   </body>
 </html>
