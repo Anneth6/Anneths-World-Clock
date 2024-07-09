@@ -1,6 +1,6 @@
-/* establish consistent font family and sizing
-dark and light mode (light: yellow and peach; dark: midnight blue and teal or purple or grey?)
-return to home/all clocks
+/* to do:
+button: dark and light mode (light: yellow and peach; dark: midnight blue and teal or purple or grey?)
+button: return to home/all clocks
 see if we can get time zone details horizontal and consistent
 see if we can overwrite and display local time above time zones */
 
@@ -11,6 +11,9 @@ see if we can overwrite and display local time above time zones */
   font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+.dark p {
+  color: rgba(250, 249, 249, 0.8);
 }
 .peralta-regular {
   font-family: "Peralta", serif;
@@ -23,7 +26,6 @@ h2 {
   color: rgb(161, 30, 56);
   font-family: "Peralta", serif;
 }
-
 h1 {
   text-align: center;
   font-size: 40px;
@@ -32,6 +34,12 @@ h2 {
   font-size: 30px;
   margin: 0 0 5px;
 }
+.dark h1 {
+  color: #c4bbf0;
+}
+.dark h2 {
+  color: #c4bbf0;
+}
 body {
   font-family: "Open Sans", sans-serif;
   height: 100%;
@@ -39,6 +47,37 @@ body {
   background-repeat: no-repeat;
   background: linear-gradient(360deg, #fcd9c8 5%, #fdffcd 95%) fixed;
 }
+.dark {
+  background-repeat: no-repeat;
+  background: linear-gradient(360deg, #363b4e 5%, #474168 95%) fixed;
+}
+button {
+  display: flex;
+  margin: 5px 0px 10px 0px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fdffcd;
+  color: #e26d6d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease;
+}
+button:hover {
+  background-color: #e26d6d;
+  color: #fdffcd;
+}
+.dark button {
+  background-color: #4f3b78;
+  color: #c4bbf0;
+}
+.dark button:hover {
+  background-color: #c4bbf0;
+  color: #4f3b78;
+}
+
 select {
   color: rgb(161, 30, 56);
   display: block;
@@ -48,18 +87,30 @@ select {
   font-size: 16px;
   border-color: rgb(0, 0, 0, 0.1);
 }
+.dark select {
+  color: #4f3b78;
+}
 a {
   color: #e26d6d;
   font-weight: 700;
 }
+.dark a {
+  color: #c4bbf0;
+}
 a:hover {
   color: rgb(161, 30, 56);
+}
+.dark a:hover {
+  color: #b9d4f1;
 }
 footer {
   color: rgb(0, 0, 0, 0.8);
   font-size: 14px;
   text-align: center;
   padding-top: 10px;
+}
+.dark footer {
+  color: rgba(250, 249, 249, 0.8);
 }
 .top-instruct {
   font-size: 14px;
@@ -75,12 +126,18 @@ footer {
   border-radius: 25px;
   box-shadow: 0 30px 50px rgba(3, 3, 3, 0.2);
 }
+.dark .world-clock-container {
+  background-color: #495664;
+}
 .city-display {
   display: flex;
   margin: 10px 10px;
   justify-content: space-between;
   padding: 30px 0;
   border-bottom: 2px dashed #e26d6d;
+}
+.dark .city-display {
+  border-bottom: 2px dashed #c4bbf0;
 }
 .city-display:last-child {
   border: none;
@@ -90,19 +147,29 @@ footer {
   margin-top: 0;
   padding-bottom: 10px;
 }
+.dark .date {
+  color: rgba(250, 249, 249, 0.8);
+}
 .time {
   font-size: 30px;
   font-weight: 600;
+}
+.dark .time {
+  color: rgba(250, 249, 249, 0.8);
 }
 .time small {
   font-size: 20px;
   font-weight: 400;
 }
-.hour24 .hour12 {
+.hour24,
+.hour12 {
   text-align: end;
 }
 .small-or {
   color: rgb(0, 0, 0, 0.7);
   font-size: 14px;
   font-weight: 300;
+}
+.dark .small-or {
+  color: rgba(250, 249, 249, 0.6);
 }
