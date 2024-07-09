@@ -88,7 +88,8 @@ select {
   border-color: rgb(0, 0, 0, 0.1);
 }
 .dark select {
-  color: #4f3b78;
+  color: rgba(250, 249, 249, 0.8);
+  background-color: #363b4e;
 }
 a {
   color: #e26d6d;
