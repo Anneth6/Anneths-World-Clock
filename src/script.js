@@ -8,9 +8,9 @@ function changeTheme() {
 
 function homePage() {
   // Simulate navigating back to the initial state without reloading
-  window.location.href = "index.html";
+  window.location.href = "/";
   // Reset the theme state
-  if (isDarkTheme === "dark") {
+  if (isDarkTheme) {
     document.querySelector("body").classList.add(".dark");
   } else {
     document.querySelector("body").classList.remove(".dark");
