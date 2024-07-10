@@ -58,12 +58,16 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "currentLocalTime") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let cityElement = document.querySelector("#displayed-cities");
   cityElement.innerHTML = `
-  <div>
-            <h2>${cityName}</h2>
+           <div class="city-display">
+          <div>
+           <h2>${cityName}</h2>
             <div class="date">${cityTime.format("dddd, DD MMMM YYYY")}</div>
           </div>
           <div class="time">

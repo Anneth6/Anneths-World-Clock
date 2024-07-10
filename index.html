@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <title>🕝 World Clock 🕒</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,48 +16,45 @@
     <!-- moment libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
-    <title>🕝 World Clock 🕒</title>
   </head>
   <body>
     <div class="world-clock-container">
       <header>
-        <!-- insert dark/light mode and return to home buttons -->
         <div class="headerButtons">
           <button class="themeButton" type="text">Light / Dark mode</button>
-          <!-- testing out button settings -->
-          <!-- <a href="index.html">
-            <button class="returnButton" type="text">View all cities</button></a
-          > -->
           <button class="returnButton" type="text">View all cities</button>
         </div>
       </header>
-
+      <!-- title and basic instructions -->
       <div class="world-clock-body">
         <h1>World Clock</h1>
         <p class="top-instruct">
           To display time zone, select a city from the dropdown
         </p>
       </div>
+      <!-- selection dropdown -->
       <div>
         <select name="city" id="city-select">
           <option value="">Choose a city</option>
-          <option value="">Local time</option>
+          <option value="currentLocalTime">Local time</option>
           <option value="Europe/Berlin">Berlin</option>
           <option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
           <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
-          <option value="Europe/Lisbon">Lisbon</option>
           <option value="Europe/London">London</option>
           <option value="Atlantic/Madeira">Madeira</option>
           <option value="Indian/Maldives">Maldives</option>
-          <option value="Australia/Melbourne">Melbourne</option>
           <option value="America/New_York">New York</option>
-          <option value="Africa/Timbuktu">Timbuktu</option>
           <option value="Antarctica/South_Pole">South Pole</option>
           <option value="Zulu">Zulu</option>
+          <!-- <option value="Europe/Lisbon">Lisbon</option>
+          <option value="Australia/Melbourne">Melbourne</option>
+          <option value="Africa/Timbuktu">Timbuktu</option> -->
         </select>
       </div>
-      <!-- display 3 to 5 timezones -->
-      <div id="displayed-cities">
+      <!-- display 3 timezones on loading -->
+
+      <div class="displayed-cities" id="displayed-cities">
+        <div class="selectedDrop" id="selectedDrop"></div>
         <div class="city-display" id="lisbon">
           <div>
             <h2>Lisbon</h2>
@@ -95,6 +93,7 @@
         </div>
       </div>
     </div>
+    <!-- footer contact details -->
     <footer>
       This project was coded by
       <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
@@ -107,7 +106,7 @@
         >Netlify</a
       >.
     </footer>
-
+    <!-- link to js script file -->
     <script src="src/script.js"></script>
   </body>
 </html>

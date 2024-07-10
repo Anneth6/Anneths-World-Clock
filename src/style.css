@@ -142,11 +142,6 @@ footer {
 .dark .world-clock-container {
   background-color: #495664;
 }
-#displayed-cities {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .city-display {
   display: flex;
   margin: 10px 10px;
