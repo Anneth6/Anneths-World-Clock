@@ -1,5 +1,4 @@
 /* to do:
-button: dark and light mode (light: yellow and peach; dark: midnight blue and teal or purple or grey?)
 button: return to home/all clocks
 see if we can get time zone details horizontal and consistent
 see if we can overwrite and display local time above time zones */
@@ -165,6 +164,8 @@ footer {
   color: rgba(250, 249, 249, 0.8);
 }
 .time {
+  display: flex;
+  flex-direction: column;
   font-size: 30px;
   font-weight: 600;
 }
@@ -172,17 +173,23 @@ footer {
   color: rgba(250, 249, 249, 0.8);
 }
 .time small {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
+  text-align: end;
+  margin-right: 0;
 }
-.hour24,
 .hour12 {
+  font-size: 20px;
+  text-align: end;
+}
+.hour24 {
   text-align: end;
 }
 .small-or {
   color: rgb(0, 0, 0, 0.7);
   font-size: 14px;
   font-weight: 300;
+  text-align: end;
 }
 .dark .small-or {
   color: rgba(250, 249, 249, 0.6);

@@ -23,8 +23,8 @@
         <!-- insert dark/light mode and return to home buttons -->
         <div class="headerButtons">
           <button class="themeButton" type="text">Light / Dark mode</button>
-          <!-- testing out button settings
-          <a href="index.html">
+          <!-- testing out button settings -->
+          <!-- <a href="index.html">
             <button class="returnButton" type="text">View all cities</button></a
           > -->
           <button class="returnButton" type="text">View all cities</button>
@@ -56,30 +56,45 @@
         </select>
       </div>
       <!-- display 3 to 5 timezones - horizontal if possible; include date and time -->
-      <div class="city-display">
-        <div>
-          <h2>City Name here</h2>
-          <div class="date">Tuesday, 09 July 2024</div>
+      <div>
+        <div class="city-display" id="lisbon">
+          <div>
+            <h2>Lisbon</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time">
+            <div>
+              <span class="hour24"></span> <span class="small-or">or</span>
+            </div>
+            <span class="hour12"></span>
+          </div>
         </div>
-        <div class="time">
-          <span class="24-hour">14:33</span> <span class="small-or">or</span>
-          <br />
-          <span class="12-hour">02:33<small>pm</small></span>
+        <div class="city-display" id="melbourne">
+          <div>
+            <h2>Melbourne</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time">
+            <div>
+              <span class="hour24"></span> <span class="small-or">or</span>
+            </div>
+            <span class="hour12"></span>
+          </div>
         </div>
-      </div>
-      <div class="city-display">
-        <div>
-          <h2>City Name here</h2>
-          <div class="date">Tuesday, 09 July 2024</div>
-        </div>
-        <div class="time">
-          <span class="hour24">14:33</span> <span class="small-or">or</span>
-          <br />
-          <span class="hour12">02:33<small>pm</small></span>
+        <div class="city-display" id="timbuktu">
+          <div>
+            <h2>Timbuktu</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time">
+            <div>
+              <span class="hour24"></span> <span class="small-or">or</span>
+            </div>
+            <span class="hour12"></span>
+          </div>
         </div>
       </div>
     </div>
-
     <footer>
       This project was coded by
       <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
