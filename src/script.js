@@ -1,5 +1,3 @@
-let isDarkTheme = false; // Global variable to track theme state
-
 function changeTheme() {
   let body = document.querySelector("body");
   body.classList.toggle("dark");
@@ -64,14 +62,15 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let cityTimeZone = event.target.value;
-  if (cityTimeZone === "currentLocalTime") {
-    cityTimeZone = moment.tz.guess();
-  }
-  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-  let cityTime = moment().tz(cityTimeZone);
-  let cityElement = document.querySelector("#displayed-cities");
-  cityElement.innerHTML = `
+  setInterval(function () {
+    let cityTimeZone = event.target.value;
+    if (cityTimeZone === "currentLocalTime") {
+      cityTimeZone = moment.tz.guess();
+    }
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    let cityTime = moment().tz(cityTimeZone);
+    let cityElement = document.querySelector("#displayed-cities");
+    cityElement.innerHTML = `
            <div class="city-display">
           <div>
            <h2>${cityName}</h2>
@@ -87,11 +86,15 @@ function updateCity(event) {
               "hh:mm:ss"
             )} <small>${cityTime.format("A")}</small></span>
           </div>`;
+  }, 1000);
 }
 
 // initial page loading
 updateTime();
 setInterval(updateTime, 1000);
+
+// Global variable to track theme state
+let isDarkTheme = false;
 
 // select city from dropdown
 let citySelectElement = document.querySelector("#city-select");
