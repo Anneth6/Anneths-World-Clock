@@ -12,7 +12,6 @@ function homePage() {
 }
 
 function updateTime() {
-  // create for: Lisbon, Melbourne, Timbuktu
   // Lisbon
   let lisbonElement = document.querySelector("#lisbon");
   if (lisbonElement) {
@@ -57,9 +56,35 @@ function updateTime() {
   }
 }
 
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let cityElement = document.querySelector("#displayed-cities");
+  cityElement.innerHTML = `
+  <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("dddd, DD MMMM YYYY")}</div>
+          </div>
+          <div class="time">
+            <div>
+              <span class="hour24">${cityTime.format(
+                "HH:mm:ss"
+              )}</span> <span class="small-or">or</span>
+            </div>
+            <span class="hour12">${cityTime.format(
+              "hh:mm:ss"
+            )} <small>${cityTime.format("A")}</small></span>
+          </div>`;
+}
+
 // initial page loading
 updateTime();
 setInterval(updateTime, 1000);
+
+// select city from dropdown
+let citySelectElement = document.querySelector("#city-select");
+citySelectElement.addEventListener("change", updateCity);
 
 // set page theme
 let themeButton = document.querySelector(".themeButton");
