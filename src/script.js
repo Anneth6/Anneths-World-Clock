@@ -1,14 +1,21 @@
+let isDarkTheme = false; // Global variable to track theme state
+
 function changeTheme() {
   let body = document.querySelector("body");
   body.classList.toggle("dark");
+  isDarkTheme = !isDarkTheme; // Update theme state
 }
 
 function homePage() {
+  // Simulate navigating back to the initial state without reloading
   window.location.href = "index.html";
-
-  if (changeTheme === ".dark") {
-    body.classList.toggle("dark");
+  // Reset the theme state
+  if (isDarkTheme === "dark") {
+    document.querySelector("body").classList.add(".dark");
+  } else {
+    document.querySelector("body").classList.remove(".dark");
   }
+  // Here you can add more logic to reset other parts of your page if necessary
 }
 
 function updateTime() {
