@@ -45,6 +45,20 @@ function updateTime() {
       "hh:mm:ss [<small>]A[</small>]"
     );
   }
+  // Paris
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTime24Element = parisElement.querySelector(".hour24");
+    let parisTime12Element = parisElement.querySelector(".hour12");
+    let parisTime = moment().tz("Europe/Paris");
+
+    parisDateElement.innerHTML = parisTime.format("dddd, DD MMMM YYYY");
+    parisTime24Element.innerHTML = parisTime.format("HH:mm:ss");
+    parisTime12Element.innerHTML = parisTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
   // Timbuktu
   let timbuktuElement = document.querySelector("#timbuktu");
   if (timbuktuElement) {
